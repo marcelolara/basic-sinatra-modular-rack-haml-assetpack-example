@@ -1,2 +1,2 @@
-Sinatra-rack-modular-assetpack-base
-===================================
+Sinatra-modular-rack-assetpack-base-example
+===========================================
