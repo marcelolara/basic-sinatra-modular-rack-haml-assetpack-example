@@ -1,5 +1,7 @@
 require 'sinatra'
+require 'haml'
 
 get '/' do 
-   erb :home
+  @title= "base-sinatra-modular-rack-haml-assetpack-example"
+  haml :home
 end
