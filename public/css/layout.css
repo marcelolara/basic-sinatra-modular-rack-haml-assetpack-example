@@ -1,0 +1,23 @@
+/** GLOBAL **/
+body, html {
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  font-size: 16px;
+}
+
+/** HEADINGS **/
+h1 { font-size: 2.250em; /* 36px */ }
+
+header, 
+section {
+  margin: 0 auto;
+  padding: 20px;
+  overflow: auto;
+  max-width: 1000px;
+  width: 98%;
+}
+
+section p {
+  margin-bottom: 10px;
+}

@@ -1,8 +1,13 @@
 !!! 5
 %html{ lang: "en" }
   %head
-    %title= @title
     %meta{ charset: "utf-8" }
+    %title= @title
+    %link{ href:"http://fonts.googleapis.com/css?family=Open+Sans:400,300",
+           rel: "stylesheet", type: "text/css" }
+    %link{ href: "/css/reset.css", rel: "stylesheet", media: "screen" }
+    %link{ href: "/css/layout.css", rel: "stylesheet", media: "screen" }
+
   %body
     %header
       %h1= @title
