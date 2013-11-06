@@ -1,2 +1,5 @@
+require 'sinatra/base'
+
 require './main'
-run Sinatra::Application
+
+map('/') { run App }
