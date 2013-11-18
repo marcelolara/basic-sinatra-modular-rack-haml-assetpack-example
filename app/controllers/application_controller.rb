@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
 
   register Sinatra::AssetPack
 
-  assets {
+  assets do
 
     # Configure folder to save files
     serve '/css', from: 'assets/css'
@@ -22,10 +22,5 @@ class ApplicationController < Sinatra::Base
 
     # Set file compression
     css_compression :yui
-  }
-
-  get '/' do
-    @title= "base-sinatra-modular-rack-haml-assetpack-example"
-    haml :home
   end
 end
