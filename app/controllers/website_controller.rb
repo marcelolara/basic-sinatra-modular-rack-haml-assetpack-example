@@ -1,16 +1,11 @@
-require 'sinatra/base'
-require 'sinatra/assetpack'
-require 'haml'
+class WebsiteController < ApplicationController
+  before do
+    set_title
+  end
 
-class App < Sinatra::Base
-  set :root, File.dirname(__FILE__)
-
-  register Sinatra::AssetPack
-
-  assets {
-
+  assets do
     # Configure folder to save files
-    serve '/css', from: 'app/css'
+    serve '/css', from: 'assets/css'
 
     # Group different files in one directive
     css :application, '/css/application.css', [
@@ -20,9 +15,10 @@ class App < Sinatra::Base
 
     # Set file compression
     css_compression :yui
-  }
+  end
 
-  get '/' do 
+  # Configuration of routes
+  get '/' do
     @title= "base-sinatra-modular-rack-haml-assetpack-example"
     haml :home
   end
