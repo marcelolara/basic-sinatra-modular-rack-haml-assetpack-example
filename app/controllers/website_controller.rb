@@ -1,5 +1,7 @@
 class WebsiteController < ApplicationController
-  register Sinatra::AssetPack
+  before do
+    set_title
+  end
 
   assets do
     # Configure folder to save files
@@ -15,6 +17,7 @@ class WebsiteController < ApplicationController
     css_compression :yui
   end
 
+  # Configuration of routes
   get '/' do
     @title= "base-sinatra-modular-rack-haml-assetpack-example"
     haml :home
